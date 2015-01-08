@@ -10,6 +10,8 @@
     }
   ],
   "require": {
+    "php":">5.4.0",
+    "ext-pdo_sqlite":"*",
     "drakojn/io": "0.1.1",
     "lcobucci/di-builder": "3.0.0",
     "twig/twig": "1.6.5",
@@ -20,5 +22,12 @@
     "psr-4":{
       "Duodraco\\StarterToDo\\":"application/source/Duodraco/StarterToDo"
     }
+  },
+  "scripts":{
+    "post-install-cmd":[
+      "cp fixture/empty.sqlite data/db.sqlite",
+      "cp application/settings/parameters.yml.sample application/settings/parameters.yml"
+    ],
+    "test-it":"php -S localhost:32768 -t web/ web/index.php"
   }
 }

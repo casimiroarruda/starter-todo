@@ -4,26 +4,22 @@
 
 ### Instalação
 
-##### 1. Obtenha o [Composer](http://getcomposer.org) e instale as dependências do projeto
+Obtenha o [Composer](http://getcomposer.org) e instale as dependências do projeto
 
 ```
 php composer.phar install
 ```
 
-##### 2. Copie a base de dados
+### Teste
+
+Usando o servidor embutido do PHP
 
 ```
-cp fixture/empty.sqlite data/db.sqlite
+php composer.phar run-script test-it
 ```
 
-##### 3. Copie o arquivo de parâmetros e edite-o para suas necessidades
+Isso levantará o servidor embutido do PHP na porta 32768 (acredito que você não esteja usando esta porta para mais nada).
 
-```
-cp application/settings/parameters.yml.sample application/settings/parameters.yml
-```
+Abra o navegador e aponte para [localhost:32768](http://localhost:32768).
 
-##### 4. Execute com o servidor web do PHP
-
-```
-php -S localhost:8080 -t web/ web/index.php
-```
+Você pode rodar o servidor php por sí mesmo, ou configurar o projeto em um servidor web dedicado, como o Apache, Nginx ou IIS - basta apontar o *Document Root* para **web/** 
