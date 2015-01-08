@@ -1,0 +1,10 @@
+{% extends "main.twig" %}
+{% block h2 %}Nova Tarefa{% endblock %}
+{% block content %}
+    <form method="post" action="/task">
+        <input type="hidden" name="_method" value="put"/>
+        <label for="title">Título</label>
+        <input type="text" id="title" name="title"/>
+        <button>Salvar</button>
+    </form>
+{% endblock %}

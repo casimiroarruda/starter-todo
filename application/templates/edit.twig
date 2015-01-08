@@ -1,0 +1,9 @@
+{% extends "main.twig" %}
+{% block h2 %}Editando tarefa #{{ task.getId() }}: {{ task.getTitle() }}{% endblock %}
+{% block content %}
+    <form method="post" action="/task/{{ task.getId() }}">
+        <label for="title">Título</label>
+        <input type="text" id="title" name="title" value="{{ task.getTitle() }}"/>
+        <button>Salvar</button>
+    </form>
+{% endblock %}

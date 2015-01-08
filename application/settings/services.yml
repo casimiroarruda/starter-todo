@@ -1,0 +1,27 @@
+services:
+  connection:
+    class: PDO
+    arguments:
+      - %pdo.driver%:%app.basedir%/%pdo.path%
+      - ~
+      - ~
+      - {PDO::ATT_PERSISTENT:1,PDO::ATTR_ERRMODE:PDO::ATTR_EXCEPTION}
+  pdoDriver:
+    class: Drakojn\Io\Driver\Pdo
+    arguments: [@connection]
+  taskMap:
+    class: Drakojn\Io\Mapper\Map
+    arguments:
+      - Duodraco\StarterToDo\Model\Task
+      - task
+      - id
+      - {id:id,title:title,done:done}
+  taskMapper:
+    class: Drakojn\Io\Mapper
+    arguments: [@pdoDriver, @taskMap]
+  templateLoader:
+    class: Twig_Loader_Filesystem
+    arguments: [%app.basedir%/%twig.basepath%]
+  render:
+    class: Twig_Environment
+    arguments: [@templateLoader]

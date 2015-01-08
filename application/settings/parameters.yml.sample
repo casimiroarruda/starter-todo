@@ -1,0 +1,6 @@
+parameters:
+  pdo.driver    : sqlite
+  pdo.path      : ../data/db.sqlite
+  twig.basepath : templates
+  twig.cachepath: tmp
+

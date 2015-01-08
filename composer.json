@@ -1,0 +1,24 @@
+{
+  "name": "duodraco/starter-todo",
+  "description": "A simple TO-DO application",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Duodraco",
+      "email": "o@duodra.co"
+    }
+  ],
+  "require": {
+    "drakojn/io": "0.1.1",
+    "lcobucci/di-builder": "3.0.0",
+    "twig/twig": "1.6.5",
+    "symfony/yaml": "@stable",
+    "respect/rest": "*"
+  },
+  "autoload":{
+    "psr-4":{
+      "Duodraco\\StarterToDo\\":"application/source/Duodraco/StarterToDo"
+    }
+  }
+}

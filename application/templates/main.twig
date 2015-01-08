@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Starter To-Do</title>
+    <style>
+        form.list {
+            display: inline-block;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .done {
+            text-decoration: line-through;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+<h1>Starter To-Do</h1>
+
+<h2>{% block h2 %}{% endblock %}</h2>
+<hr/>
+{% block content %}{% endblock %}
+</body>
+</html>
