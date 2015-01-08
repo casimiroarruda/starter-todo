@@ -25,6 +25,7 @@
   },
   "scripts":{
     "post-install-cmd":[
+      "mkdir data",
       "cp fixture/empty.sqlite data/db.sqlite",
       "cp application/settings/parameters.yml.sample application/settings/parameters.yml"
     ],
