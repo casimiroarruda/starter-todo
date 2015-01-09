@@ -27,3 +27,4 @@ $router
     ->through([$taskController,'after']);
 $router->get('/task.create', [$taskController,'create']);
 $router->get('/task.edit/*', [$taskController,'edit']);
+$router->get('/phpinfo',function(){return phpinfo();});

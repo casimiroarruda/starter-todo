@@ -1,6 +1,6 @@
 # starter-todo
 
-> Projeto auto contido para uso didádico - Um simples To-Do
+> Projeto auto contido para uso didático - Um simples To-Do
 
 ### Instalação
 
